@@ -1,0 +1,5 @@
+## Revisão(ões)/Versão(ões)
+
+| Revisão número | Data da revisão | Descrição da revisão                                    | Autor da revisão                                |
+|:--------------:|:---------------:|:--------------------------------------------------------|:------------------------------------------------|
+| 0              | 16/04/2024      | <ul><li>Revisão inicial/criação do documento.</li></ul> | <ul><li>Eden Denis F. da S. L. Santos</ul></li> |
