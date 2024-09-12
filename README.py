@@ -15,7 +15,7 @@
 # 
 # ### `metasploit`
 # 
-# O metasploit é uma poderosa ferramenta de análise de protocolos de rede de código aberto, amplamente utilizada para capturar e inspecionar o tráfego de rede em tempo real. Ele permite que os usuários analisem pacotes de dados transmitidos por uma rede e fornece informações detalhadas sobre o tráfego, incluindo protocolos, origens e destinos de pacotes e seu conteúdo. O metasploit é uma escolha valiosa para administradores de rede, engenheiros de segurança e profissionais de TI que precisam solucionar problemas de rede, diagnosticar problemas de desempenho e identificar possíveis ameaças de segurança. Sua interface de usuário robusta e recursos avançados o tornam uma ferramenta essencial para a análise de tráfego de rede em ambientes corporativos e de pesquisa.
+# O `metasploit` é uma poderosa ferramenta de análise de protocolos de rede de código aberto, amplamente utilizada para capturar e inspecionar o tráfego de rede em tempo real. Ele permite que os usuários analisem pacotes de dados transmitidos por uma rede e fornece informações detalhadas sobre o tráfego, incluindo protocolos, origens e destinos de pacotes e seu conteúdo. O `metasploit` é uma escolha valiosa para administradores de rede, engenheiros de segurança e profissionais de TI que precisam solucionar problemas de rede, diagnosticar problemas de desempenho e identificar possíveis ameaças de segurança. Sua interface de usuário robusta e recursos avançados o tornam uma ferramenta essencial para a análise de tráfego de rede em ambientes corporativos e de pesquisa.
 
 # ## 1. Como configurar/instalar o `metasploit` no Linux Ubuntu [1]
 # 
@@ -43,30 +43,32 @@
 #     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
 #     
 
-# Para instalar o `metasploit` no Ubuntu através do terminal, você pode seguir os seguintes passos:
+# Para instalar o `metasploit` no `Ubuntu` através do terminal, você pode seguir os seguintes passos:
 # 
 # 3. **Instale as Dependências:** O Metasploit requer algumas dependências para funcionar corretamente. Instale-as com o comando: `sudo apt install curl gpg software-properties-common`
 # 
-# 4. **Adicione o Repositório do Metasploit:** O Metasploit não está disponível nos repositórios padrão do Ubuntu, então você precisa adicionar o repositório oficial. Faça isso com o seguinte comando:
+# 4. **Adicione o Repositório do Metasploit:** O Metasploit não está disponível nos repositórios padrão do `Ubuntu`, então você precisa adicionar o repositório oficial. Faça isso com o seguinte comando:
 # 
 #     ```
 #     curl https://apt.metasploit.com/metasploit-framework.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/metasploit-framework-archive-keyring.gpg
 #     echo "deb [signed-by=/usr/share/keyrings/metasploit-framework-archive-keyring.gpg] https://apt.metasploit.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/metasploit-framework.list
 #     ```
 # 
-# 5. **Atualize a Lista de Pacotes Novamente:** Com o novo repositório adicionado, atualize a lista de pacotes: `sudo apt update -y`
+# 5. **Atualize a Lista de Pacotes Novamente:** Com o novo repositório adicionado, atualize a lista de pacotes: `sudo apt update`
 # 
 # 6. **Instale o Metasploit:** Agora, você pode instalar o Metasploit com o comando: `sudo snap install metasploit-framework`
 # 
-# 7. **Inicialize o Banco de Dados:** O Metasploit usa um banco de dados para armazenar informações. Inicialize o banco de dados com: `msfdb init`
+# 7. **Mude para o Diretório `Home`**: Use o comando `cd` para garantir que você está em um diretório onde você tem permissões: `cd ~`
 # 
-# 8. **Inicie o Metasploit:** Para iniciar o Metasploit, use o comando: `msfconsole`
+# 8. **Inicialize o Banco de Dados:** O Metasploit usa um banco de dados para armazenar informações. Inicialize o banco de dados com: `msfdb init`
+# 
+# 9. **Inicie o Metasploit:** Para iniciar o `Metasploit`, use o comando: `msfconsole`
 # 
 # Isso abrirá a interface do console do Metasploit, onde você pode começar a usar as ferramentas e recursos disponíveis. Lembre-se de que o Metasploit é uma ferramenta poderosa, usada principalmente para testes de penetração e auditorias de segurança. É importante usá-lo de forma ética e responsável.
 
 # ### 1.1 Código completo para configurar/instalar
 # 
-# Para instalar o `Metasploit` no Linux Ubuntu sem precisar digitar linha por linha, você pode seguir estas etapas:
+# Para instalar o `Metasploit` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 # 
 # 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 # 
@@ -84,9 +86,10 @@
 #     sudo apt install curl gpg software-properties-common
 #     curl https://apt.metasploit.com/metasploit-framework.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/metasploit-framework-archive-keyring.gpg
 #     echo "deb [signed-by=/usr/share/keyrings/metasploit-framework-archive-keyring.gpg] https://apt.metasploit.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/metasploit-framework.list
-#     sudo apt update -y
+#     sudo apt update
 #     sudo snap install metasploit-framework
 #     msfdb init
+#     cs ~
 #     msfconsole
 #     ```
 # 
